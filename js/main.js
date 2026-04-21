@@ -491,7 +491,7 @@ async function loadSiteContent() {
         if (document.querySelector('.footer-about p')) {
             setText('.footer-about p', content.footer?.association_description);
             const emailP = document.querySelector('.footer-contact p:first-of-type');
-            if (emailP) emailP.innerHTML = `<i class="fas fa-envelope"></i> ${content.footer?.contact_email}`;
+            if (emailP) emailP.innerHTML = `<i class="fas fa-envelope"></i> ${content.footer.contact?.email}`;
         }
     } catch (error) {
         console.error('Erreur chargement contenu JSON :', error);
